@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method ="POST" action="/story" id="words")
+    label(for="noun1") Noun:
+    input(type="text" name="noun1" id="noun1")
+    br
+    label(for="verb1") Noun:
+    input(type="text" name="verb1" id="verb1")
+    br
+    label(for="adjective1") Noun:
+    input(type="text" name="adjective1" id="adjective1")
