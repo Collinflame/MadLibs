@@ -26,19 +26,18 @@ function getStory(formData) {
   }
 }
 
-function generateStory1(formdata){
-  return `Twas a dark and stormy ${formdata.noun1}. The ${formdata.adjective1} 
-  pumpkins started to ${formdata.verb1}!`
+function generateStory1(formData){
+  return `Today me and ${formData.name} are going to ${formData.name2}!`
 }
 
-function generateStory2(formdata){
-  return `Twas a cold and wintery ${formdata.noun1}. The ${formdata.adjective1} 
-  pumpkins started to ${formdata.verb1}!`
+function generateStory2(formData){
+  return `Twas a cold and wintery ${formData.noun1}. The ${formData.adjective1} 
+  pumpkins started to ${formData.verb1}!`
 }
 
-function generateStory3(formdata){
-  return `Twas a rainy and cold ${formdata.noun1}. The ${formdata.adjective1} 
-  pumpkins started to ${formdata.verb1}!`
+function generateStory3(formData){
+  return `Twas a rainy and cold ${formData.noun1}. The ${formData.adjective1} 
+  pumpkins started to ${formData.verb1}!`
 }
 
 module.exports = router;
