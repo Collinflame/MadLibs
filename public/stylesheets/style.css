@@ -1,6 +1,8 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Magneto, Magneto, sans-serif;
+  color: #383737;
+  background-color: rgba(16,68,178,0.91)
 }
 
 a {
