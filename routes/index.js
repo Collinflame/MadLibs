@@ -22,7 +22,7 @@ function getStory(formData) {
   } else if (formData.storyChoice === "3") {
     return generateStory3(formData);
   } else if (formData.storyChoice === "Random") {
-    return pickRandomChoice(randomStory);
+    return randomStory(formData);
   } else {
     return "invalid";
   }
@@ -52,6 +52,18 @@ function generateStory3(formData){
   amount of copies of ${formData.videogame} and an unlimited amount of ${formData.food}.
   They were very ${formData.adjective2} after they won and got to have ${formData.videogame}
   and ${formData.food}.`
+}
+
+function randomStory(formData){
+  let answers = [1, 2, 3];
+  let choice = Math.floor(Math.random()*answers.length);
+  if (choice === 1) {
+    return generateStory1(formData)
+  } else if (choice === 2) {
+    return generateStory2(formData)
+  } else {
+    return generateStory3(formData)
+  }
 }
 
 module.exports = router;
