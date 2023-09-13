@@ -10,9 +10,19 @@ router.post(`/story`, function(req, res){
   let body = req.body;
   let newStory = getStory(body);
   res.render(`story`, {
-    newStory: newStory
-  })
+    newStory: newStory,
+    color: generateRandomHexCode(),
+    textColor: generateRandomHexCode()
+  });
 })
+
+function generateRandomHexCode() {
+  let hexCode = "#"
+  while (hexCode.length < 7) {
+    hexCode += (Math.round(Math.random() * 15)).toString(16)
+  }
+  return hexCode
+}
 
 function getStory(formData) {
   if (formData.storyChoice === "1") {
@@ -65,5 +75,6 @@ function randomStory(formData){
     return generateStory3(formData)
   }
 }
+
 
 module.exports = router;
